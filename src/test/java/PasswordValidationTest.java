@@ -6,17 +6,17 @@ class PasswordValidationTest {
 
     @Test
     void isPasswordValid_WhenLengthAndisDigitThan_shouldReturnTrue() {
-        assertTrue(PasswordValidation.isPasswordValid("asfik9set"));
+        assertTrue(PasswordValidation.isPasswordValid("asfik9Aset"));
     }
 
     @Test
-    void isPasswordValid_WhenLengthAndisDigitThan_shouldReturnFalse() {
+    void isPasswordValid_WhenFalseThan_shouldReturnFalse() {
         assertFalse(PasswordValidation.isPasswordValid("asfikset"));
     }
 
     @Test
-    void checkLength_WhenMinLengthEightThan_shouldReturnTrue() {
-        assertTrue(PasswordValidation.isPasswordValid("asfik9set"));
+    void checkLength_WhenTrueThan_shouldReturnTrue() {
+        assertTrue(PasswordValidation.isPasswordValid("asfjhFasf7asfjhsaf"));
     }
 
     @Test
@@ -26,7 +26,7 @@ class PasswordValidationTest {
 
     @Test
     void isDigit_WhenContainsMinOneDigitThan_shouldReturnTrue() {
-        assertTrue(PasswordValidation.isPasswordValid("asfik9set"));
+        assertTrue(PasswordValidation.isPasswordValid("asAfik9set"));
     }
 
     @Test
@@ -63,7 +63,7 @@ class PasswordValidationTest {
 
     @Test
     void hasLowerLetter_WhenNoLowerLetterThan_ShouldReturnFalse() {
-        String password = "kasjfaskjhafA3";
+        String password = "KJSAFJKSF7AF88";
         assertFalse(PasswordValidation.hasLowerLetter(password));
     }
 
@@ -74,7 +74,7 @@ class PasswordValidationTest {
     }
     @Test
     void hasUpperLetter_WhenNoUpperLetterThan_ShouldReturnFalse() {
-        String password = "kasjfaskjhafA3";
+        String password = "kasjfaskjhaf3";
         assertFalse(PasswordValidation.hasUpperLetter(password));
     }
 }

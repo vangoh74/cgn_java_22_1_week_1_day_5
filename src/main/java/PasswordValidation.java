@@ -7,8 +7,9 @@ public class PasswordValidation {
         String pw = getPassword();
         if (isPasswordValid(pw)) {
             System.out.println("Dein Passwort ist gültig!");
+        } else {
+            System.out.println("Passwort ist falsch!");
         }
-        System.out.println("Passwort ist falsch!");
     }
 
     /* Conditions:
@@ -58,7 +59,7 @@ public class PasswordValidation {
                 return true;
             }
         }
-        return true;
+        return false;
     }
 
     public static boolean hasUpperLetter(String str) {
@@ -67,9 +68,8 @@ public class PasswordValidation {
                 return true;
             }
         }
-        return true;
+        return false;
     }
-
 
     public static String getPassword() {
         System.out.println("Bitte, geben Sie Ihr Password ein: ");
@@ -77,7 +77,5 @@ public class PasswordValidation {
         String input = scanner.nextLine();
         return input;
     }
-
-
 }
 
